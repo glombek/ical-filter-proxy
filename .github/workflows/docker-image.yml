@@ -10,7 +10,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: cimg/ruby:2.7
+      image: ruby:2.7
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

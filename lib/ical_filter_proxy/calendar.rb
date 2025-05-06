@@ -38,7 +38,8 @@ module IcalFilterProxy
         end
       end
 
-      filtered_calendar.to_ical
+      # Replace TZID=Central Standard Time with TZID=America/Chicago
+      filtered_calendar.to_ical.gsub('TZID=Central Standard Time', 'TZID=America/Chicago')
     end
 
     private

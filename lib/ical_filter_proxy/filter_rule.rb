@@ -13,7 +13,7 @@ module IcalFilterProxy
 
     def match_event?(filterable_event)
       event_data = filterable_event.send(field.to_sym)
-      return negation if event_data.nil?  # Check if event_data is null
+      return negation if event_data.nil?  # Check if event_data is null 
     
       negation ^ evaluate(event_data, values)
     end
